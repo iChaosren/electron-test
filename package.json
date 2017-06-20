@@ -1,0 +1,21 @@
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "description": "A random Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/iChaosren/electron-test",
+  "keywords": [
+    "Electron",
+    "quick",
+    "random",
+    "playground",
+    "demo"
+  ],
+  "author": "Clayton",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  }
+}

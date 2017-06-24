@@ -7,13 +7,25 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
+//var appRoot = path.join(__dirname, '..');
+//require('electron-compile').init(appRoot, require.resolve('./main.js'));
+
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow(
+    {
+      width: 800, 
+      height: 600,       
+      transparent: true, 
+      icon: 'favicon.ico',
+      frame: false, //Debug
+      titleBarStyle: 'hidden' //Debug
+    })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -58,3 +70,12 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+exports.minimizeWindow = () => {
+    BrowserWindow.getFocusedWindow().minimize();
+}
+
+exports.maximizeWindow = () => {
+    BrowserWindow.getFocusedWindow().maximize();
+}
+
+//const main_src = require('./src/main/main-exports.js');

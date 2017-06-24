@@ -1,0 +1,103 @@
+body {
+    -webkit-user-select: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin-left: -24px;
+}
+
+#body-div {
+    background-color: #f7f7f7; 
+    border-radius: 6px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 30px;
+}
+
+.titlebar {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+
+.title-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2px;
+    height: 30px;
+    background-color: #333;
+    color: #ccc;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    -webkit-app-region: drag;
+}
+
+.control-box {
+    -webkit-app-region: no-drag;
+}
+
+.close-window {
+    font-size: 1.2em;
+    background: 0;
+    color: #ff0000;
+    border: 0;
+    border-radius: 6px;
+    width: 32px;
+    height: 30px;
+    &:hover {
+        background-color: #ff0000;
+        color: #f7f7f7;
+    }
+}
+
+.maximize-window {
+    font-size: 1.2em;
+    background: 0;
+    color: #ccc;
+    border: 0;
+    border-radius: 6px;
+    width: 32px;
+    height: 30px;
+    &:hover {
+        background-color: #ccc;
+        color: #333;
+    }
+}
+
+.minimize-window {
+    font-size: 1.2em;
+    background: 0;
+    color: #ccc;
+    border: 0;
+    border-radius: 6px;
+    width: 32px;
+    height: 30px;
+    margin-top: -2px;
+    &:hover {
+        background-color: #ccc;
+        color: #333;
+    }
+}
+
+.open-panel {
+    font-size: 1.2em;
+    background: 0;
+    color: #ccc;
+    border: 0;
+    border-radius: 6px;
+    width: 32px;
+    height: 30px;
+    -webkit-app-region: no-drag;
+    &:hover {
+        background-color: #ccc;
+        color: #333;
+    }
+}

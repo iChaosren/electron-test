@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
 
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World Electron</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <!--link rel="stylesheet" href="less/font-awesome/font-awesome.less"-->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/import-roboto.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="body-div">
+    <div class="title-bar">
+      <button class="open-panel"><i class="fa fa-bars"></i></button>
+      <script>document.write(document.title)</script>
+      <div class="control-box pull-right">
+        <button class="minimize-window"><i class="fa fa-window-minimize"></i></button>
+        <button class="maximize-window"><i class="fa fa-window-maximize"></i></button>
+        <button class="close-window"><i class="fa fa-times fa-lg"></i></button>
+      </div>
+    </div>
+
+    <div class="left-panel" style="display: none;">
+       <ul>
+         <li>
+            <i class="fa fa-home"></i> Home
+         </li>
+         <li>
+           <i class="fa fa-circle-o"></i> Element 1
+         </li>
+         <li>
+           <i class="fa fa-circle-o"></i> Element 2
+         </li>
+         <li>
+           <i class="fa fa-circle-o"></i> Element 3
+         </li>
+       </ul>
+    </div>
+
+    <div class="content">
+
+    </div>
+  </div>
+</body>
+
+<script>
+      var $ = require('jquery');//require('./node_modules/jquery/dist/jquery.min.js');
+      require('./js/general.js');
+</script>
+
 </html>

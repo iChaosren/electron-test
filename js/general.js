@@ -1,0 +1,2 @@
+
+var remote=require('electron').remote;var main=remote.require('./main.js');$('.close-window').click(function(){window.close();});$('.maximize-window').click(function(){main.maximizeWindow();});$('.minimize-window').click(function(){main.minimizeWindow();});$('.open-panel').click(function(){$('.left-panel').slideToggle();});
